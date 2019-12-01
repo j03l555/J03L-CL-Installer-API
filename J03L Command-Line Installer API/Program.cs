@@ -8,7 +8,7 @@ using System.IO;
 
 namespace J03L_Command_Line_Installer_API
 {
-    class Program
+    public class J03L_CLIAPI
     {
         // ASSIGN MAIN VARIABLES.
         static string VERSION = "0.0.1-initial";
