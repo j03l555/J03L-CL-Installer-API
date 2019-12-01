@@ -11,8 +11,8 @@ namespace J03L_Command_Line_Installer_API
     public class J03L_CLIAPI
     {
         // ASSIGN MAIN VARIABLES.
-        public string VERSION = "0.0.1-initial";
-        public void CLIinfo(string[] args)
+        public static string VERSION = "0.0.1-initial";
+        public static void CLIinfo()
         {
             Console.WriteLine(@"====[J03L Command-Line Installer API]====
 Version " + VERSION + @"
@@ -24,11 +24,11 @@ https://github.com/joelastley555/J03L-CL-Installer-API
 License:
 https://github.com/joelastley555/J03L-CL-Installer-API/blob/master/LICENSE");   
         }
-        public void CreateInstaller(string installName, bool installFromInternet, bool hasLicense, bool mustScrollToAccept, string licenseText)
+        public static void CreateInstaller(string installName, bool installFromInternet, bool hasLicense, bool mustScrollToAccept, string licenseText)
         {
 
         }
-        public bool ShowLicense(string licenseText)
+        public static bool ShowLicense(string licenseText)
         {
             string newLicenseText = Regex.Replace(licenseText, @"^\s+$[\r\n]*", System.Environment.NewLine + "                                                                                                                       "+System.Environment.NewLine, RegexOptions.Multiline); // I'm sure there is a much better way to get around this, but to make our lives easier, we add an extra 120 whitespaces (the length of a single command-line window at the default window size) after a new line so that we can calculate our pages correctly later on.
             int length = newLicenseText.Length;
